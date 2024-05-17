@@ -3,12 +3,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
-import Hukumnaama from "./Hukumnaama";
+import { AiOutlineLoading } from "react-icons/ai";
 /* eslint-disable react/prop-types */
 const Search = ({ ang, shabad, setShabad }) => {
 	const url = `https://api.banidb.com/v2/angs/${ang}`;
 	const [datas, setDatas] = useState({});
-	const [ID, setID] = useState(0);
 	const [isLoading, setisLoading] = useState(true);
 
 	useGSAP(() => {
@@ -33,12 +32,14 @@ const Search = ({ ang, shabad, setShabad }) => {
 			setisLoading(false);
 		};
 		fetchData();
-	}, []);
+	}, [url]);
 
 	return (
-		<div className="flex flex-col items-center justify-center  text-violet-900 border-orange-800 border-1 h-[100%] w-full">
+		<div className="flex flex-col items-center justify-center h-[100%] w-full bg-gradient-to-r from-cyan-500 to-blue-300">
 			{isLoading ? (
-				<div className="text-[10vh]">LOADING...</div>
+				<div className="text-[10vh] flex items-center h-[100vh] ">
+					<AiOutlineLoading className="animate-spin duration-75"/>
+				</div>
 			) : (
 				datas.page?.map((item, i) => {
 					return (
@@ -58,7 +59,7 @@ const Search = ({ ang, shabad, setShabad }) => {
 				})
 			)}
 			{shabad && (
-                <Link to="/hukumnaama">
+                <Link to={`/hukumnaama/${shabad}`}>
                     <div
                         id="submit"
                         className={`bg-red-500 rounded-full px-10 py-5 text-white z-10 fixed left-[10%] top-[90%] translate-x-[-50%] shadow-2xl shadow-black border-[2px] cursor-pointer`}

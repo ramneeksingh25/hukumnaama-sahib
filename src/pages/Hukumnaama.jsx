@@ -16,7 +16,7 @@ const Hukumnaama = ({ang,shabad}) => {
       setData(data);
 		};
 		fetchData();
-	}, []);
+	}, [url]);
   return (
     <>
     {shabad ? (
@@ -38,7 +38,9 @@ const Hukumnaama = ({ang,shabad}) => {
             </span>
             </div>
             </h2>
-            <h1 className='text-[3vw]'>Hukumnaama Sahib</h1>
+            <Link to="/">
+              <h1 className='text-[3vw]'>Hukumnaama Sahib</h1>
+            </Link>
             <h2>Ang:{ang}</h2>
         </div>
         <div id="gurmukhi" className='w-full h-[35%] flex flex-col items-center justify-center'>

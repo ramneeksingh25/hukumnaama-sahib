@@ -17,11 +17,11 @@ function App() {
 						element={<Home setAng={setAng} ang={ang}/>}
 					/>
 					<Route
-						path="/search"
+						path={`/search/${ang}`}
 						element={<Search ang={ang} shabad={shabad} setShabad={setShabad}/>}
 					/>
 					<Route
-						path="/hukumnaama"
+						path={`/hukumnaama/${shabad}`}
 						element={<Hukumnaama ang={ang} shabad={shabad}/>}
 					/>
 				</Routes>
