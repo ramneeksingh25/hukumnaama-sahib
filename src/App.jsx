@@ -5,7 +5,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Search from "./pages/Search";
 function App() {
-	const [ang,setAng]=useState(200);
+	const [ang,setAng]=useState(0);
 	const [shabad,setShabad]= useState();
 	return (
 		<>

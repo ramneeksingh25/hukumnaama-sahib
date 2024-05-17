@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import { FaArrowRight } from "react-icons/fa"
 
-const Submit = (props) => {
+const Submit = ({set}) => {
 
   return (
-    <div className='button bg-slate-800/90 py-2 px-10 rounded-full duration-300 ease-in-out text-white cursor-pointer hover:shadow-xl shadow-black hover:bg-slate-800 flex items-center gap-2' onClick={()=>{console.log("Ang submitted:",props.set)}}>Submit 
-        <div className='bg-white rounded-full text-slate-800/90 text-[80%] p-[4%] my-2'>
-         <FaArrowRight/> 
+    <div className={'button text-md bg-[#e4a33a] hover:bg-[#e4953a] hover:translate-y-1 hover:shadow-none shadow-lg  py-2 px-10 rounded-full duration-300 ease-in-out text-[#152155] cursor-pointer shadow-black flex items-center gap-2'} onClick={()=>{console.log("Submitted:",set)}}>Submit 
+        <div className='bg-zinc-200/20 rounded-full text-[80%] p-[4%] my-2 '>
+         <FaArrowRight className="animate-[slide_1s_ease-in-out_infinite]"/> 
         </div>
     </div>
   )

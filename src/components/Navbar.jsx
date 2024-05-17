@@ -4,7 +4,6 @@ import { HiMenu } from "react-icons/hi";
 import { IoIosCloseCircle } from "react-icons/io";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { IoMoon } from "react-icons/io5";
 const Navbar = () => {
     useGSAP(()=>{
         var tl=gsap.timeline({paused :true})
@@ -24,27 +23,31 @@ const Navbar = () => {
         document.querySelector(".close").addEventListener("click",()=>{
             tl.reverse();
         });
+        document.querySelector(".home").addEventListener("click",()=>{
+            console.log("Hello");
+
+        })
     })
 	return (
-		<div className="fixed right-1 top-0">
-            <div id="nav" className="text-white flex justify-end z-[100]">
+		<div className="fixed right-1 top-0 ">
+            <div id="nav" className="text-white flex justify-end z-[100] h-[100%] w-full">
                 <div id="icon" 
-                className="h-[3vw] w-[3vw] bg-slate-900 rounded-full m-3 text-[1vw] flex items-center justify-center z-9">
+                className="p-2 bg-black border-white border-[1px] cursor-pointer rounded-full m-3 text-[1vw] flex items-center justify-center z-9">
                     <HiMenu/>
                 </div>
-                <div id="menu" className="absolute m-2 bg-slate-800 gap-10 px-5 py-3 text-[200%] flex items-center justify-between rounded-full top-0 z-0">
-                    <h1 className="hover:text-slate-500">
-                        <Link to="/">
-                        <AiFillHome/>
+                <div id="menu" className="absolute m-2 bg-black border-white border-[1px] gap-10 px-5 py-3 text-[200%] flex items-center justify-between rounded-full top-0 z-0">
+                    <div className="home hover:text-slate-500">
+                        <Link to="/" >
+                            <AiFillHome />
                         </Link>
-                    </h1>
-                    <div className="dark cursor-pointer hover:text-slate-500">
-                        <IoMoon/>
                     </div>
+                    {/* DARK MODE */}
+                    {/* <div className="dark cursor-pointer hover:text-slate-500">
+                        <IoMoon/>
+                    </div> */}
                     <div className="close cursor-pointer hover:text-slate-500">
                         <IoIosCloseCircle/>
                     </div>
-
                 </div>
             </div>
         </div>
