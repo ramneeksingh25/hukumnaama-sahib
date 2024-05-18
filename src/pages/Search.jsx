@@ -87,10 +87,9 @@ const Search = ({ ang, shabad, setShabad }) => {
 				<Link to={`/hukumnaama/${shabad}`}>
 					<div
 						id="submit"
-						className={`bg-red-500 rounded-full px-10 py-5 text-white z-10 fixed left-[10%] top-[90%] translate-x-[-50%] shadow-2xl shadow-black border-[2px] cursor-pointer`}>
-						SUBMIT
-					</div>
+						className={`z-10 fixed left-[10%] top-[90%] translate-x-[-50%] shadow-2xl shadow-black cursor-pointer`}>
 					<Submit set={shabad} />
+					</div>
 				</Link>
 			)}
 		</div>
