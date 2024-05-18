@@ -13,7 +13,7 @@ const Home = ({ setAng, ang }) => {
 		// bg-[url('src/assets/images/home-back.jpg')] bg-center
 		<div className="h-[100vh] w-full flex flex-col items-center justify-center z-[2]">
 			<h1 className="absolute left-[12%] -translate-x-1/2 top-[2%] text-[4vh] text-[#fffcea] rounded-full flex items-center gap-4 hover:text-[#e4a33a]">
-				<FaBookOpen className="text-[#e4a33a]"/>
+				<FaBookOpen className="text-[#e4a33a]" />
 				Hukumnaama Sahib
 			</h1>
 			<div className="h-[50vh] w-[50vh] bg-[rgba(252,252,252,0.07)] border-white/40 border-[0.01px] hover:bg-[rgba(252,252,252,0.09)] flex flex-col items-center justify-center gap-[10%] text-[250%] shadow-xl hover:shadow-lg rounded-xl duration-1000 ease-linear z-[2]">
@@ -25,12 +25,12 @@ const Home = ({ setAng, ang }) => {
 					}}
 					placeholder={"Enter Ang..."}
 				/>
-				<Link to={!isNaN(ang) && `/search/${ang}`}>
+				<Link to={!isNaN(ang) && ang !== 0 && `/search/${ang}`}>
 					<Submit set={ang} />
 				</Link>
-        <h1 className="absolute right-[0.7%] bottom-[1%] text-[1.5vh] text-[#a1902f] rounded-full flex items-center gap-4 ">
-          Contact for any bugs: +918287734576 or singhrramneek@gmail.com
-			</h1>
+				<h1 className="absolute right-[0.7%] bottom-[1%] text-[1.5vh] text-[#a1902f] rounded-full flex items-center gap-4 ">
+					Contact for any bugs: +918287734576 or singhrramneek@gmail.com
+				</h1>
 			</div>
 		</div>
 	);
