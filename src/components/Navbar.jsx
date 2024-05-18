@@ -23,10 +23,6 @@ const Navbar = () => {
         document.querySelector(".close").addEventListener("click",()=>{
             tl.reverse();
         });
-        document.querySelector(".home").addEventListener("click",()=>{
-            console.log("Hello");
-
-        })
     })
 	return (
 		<div className="fixed right-1 top-0 ">
@@ -44,6 +40,9 @@ const Navbar = () => {
                     {/* DARK MODE */}
                     {/* <div className="dark cursor-pointer hover:text-slate-500">
                         <IoMoon/>
+                    </div> */}
+                    {/* <div className="dark cursor-pointer hover:text-slate-500">
+                        <FaLanguage/>
                     </div> */}
                     <div className="close cursor-pointer hover:text-slate-500">
                         <IoIosCloseCircle/>

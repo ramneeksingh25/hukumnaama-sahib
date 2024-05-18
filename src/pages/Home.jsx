@@ -12,7 +12,7 @@ const Home = ({ setAng, ang }) => {
 	return (
 		// bg-[url('src/assets/images/home-back.jpg')] bg-center
 		<div className="h-[100vh] w-full flex flex-col items-center justify-center z-[2]">
-			<h1 className="absolute left-[2%] top-[2%] text-[4vh] text-[#fffcea] rounded-full flex items-center gap-4">
+			<h1 className="absolute left-[12%] -translate-x-1/2 top-[2%] text-[4vh] text-[#fffcea] rounded-full flex items-center gap-4 hover:text-[#e4a33a]">
 				<FaBookOpen className="text-[#e4a33a]"/>
 				Hukumnaama Sahib
 			</h1>
@@ -23,7 +23,7 @@ const Home = ({ setAng, ang }) => {
 					onChange={(t) => {
 						setA(t.target.value);
 					}}
-					placeholder="Enter Ang..."
+					placeholder={"Enter Ang..."}
 				/>
 				<Link to={!isNaN(ang) && `/search/${ang}`}>
 					<Submit set={ang} />
