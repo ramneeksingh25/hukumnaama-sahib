@@ -23,11 +23,12 @@ const Search = ({ ang, shabad, setShabad }) => {
 		} else {
 			fetchData();
 		}
-	}, [url]);
+	}, [url,ang]);
 	useEffect(() => {
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 		shabadArray=[];
 		console.log(datas.page);
-		datas.page?.map((item,i)=>{
+		datas.page?.map((item)=>{
 			shabadArray.includes(item.shabadId)||shabadArray.push(item.shabadId)			
 		})
 		console.log(shabadArray);
