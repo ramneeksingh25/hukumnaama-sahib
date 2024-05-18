@@ -4,6 +4,7 @@ import Hukumnaama from './pages/Hukumnaama';
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Search from "./pages/Search";
+import Background from "./components/Background";
 function App() {
 	const [ang,setAng]=useState(0);
 	const [shabad,setShabad]= useState();
@@ -11,6 +12,7 @@ function App() {
 		<>
 			<BrowserRouter>
 			<Navbar/>
+			<Background/>
 				<Routes>
 					<Route
 						path="/"
